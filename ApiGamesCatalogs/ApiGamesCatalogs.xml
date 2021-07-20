@@ -34,11 +34,11 @@
         </member>
         <member name="M:ApiGamesCatalogs.Controllers.V1.ClientsController.DeleteClient(System.String)">
             <summary>
-            Delete the selected client
-            </summary>
-            <param name="idClient">Fetched client id</param>
-            <response code="200">Delete the selected client</response>
-            <response code="204">If there is no client with this id</response>
+             Delete the selected client
+             </summary>
+             <param name="idClient">Fetched client id</param>
+             <response code="200">Delete the selected client</response>
+             <response code="204">If there is no client with this id</response>
         </member>
         <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.Obtain(System.Int32,System.Int32)">
             <summary>
@@ -88,11 +88,11 @@
         </member>
         <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.DeleteGame(System.Guid)">
             <summary>
-            Delete the selected game
-            </summary>
-            <param name="idGame">Fetched game id</param>
-            <response code="200">Delete the selected game</response>
-            <response code="204">If there is no game with this id</response>
+             Delete the selected game
+             </summary>
+             <param name="idGame">Fetched game id</param>
+             <response code="200">Delete the selected game</response>
+             <response code="204">If there is no game with this id</response>
         </member>
         <member name="M:ApiGamesCatalogs.Controllers.V1.OrdersController.Obtain(System.Int32,System.Int32)">
             <summary>

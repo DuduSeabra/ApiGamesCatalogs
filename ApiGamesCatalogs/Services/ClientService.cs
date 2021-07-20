@@ -27,7 +27,6 @@ namespace ApiGamesCatalogs.Services
 
         public async Task<ClientViewModel> Insert(ClientInputModel client)
         {
-            //Client clientEntity = null; 
 
             var clientEntity = await _clientRepository.Obtain(client.Username);
 

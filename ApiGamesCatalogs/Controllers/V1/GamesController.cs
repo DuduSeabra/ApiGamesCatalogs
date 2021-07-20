@@ -132,7 +132,10 @@ namespace ApiGamesCatalogs.Controllers.V1
             }
         }
 
-        /// <summary>
+        
+        
+        
+        ///<summary>
         /// Delete the selected game
         /// </summary>
         /// <param name="idGame">Fetched game id</param>

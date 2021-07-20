@@ -18,6 +18,7 @@ namespace ApiGamesCatalogs.Repositories
 
         public void Dispose()
         {
+            
             //Close connection with the data base
         }
 

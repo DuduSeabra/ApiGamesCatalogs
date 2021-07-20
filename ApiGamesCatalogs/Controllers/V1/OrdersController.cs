@@ -71,16 +71,9 @@ namespace ApiGamesCatalogs.Controllers.V1
         [HttpPost]
         public async Task<ActionResult<OrderViewModel>> InsertOrder([FromBody] OrderInputModel orderInputModel)
         {
-            //try
-            //{
             var order = await _orderService.Insert(orderInputModel);
 
             return Ok(order);
-            //}
-            /*catch (OrderAlreadyRegisteredException ex)
-            {
-                return UnprocessableEntity("There is already a order with this name for this producer");
-            }*/
         }
 
         /// <summary>
@@ -93,16 +86,9 @@ namespace ApiGamesCatalogs.Controllers.V1
         [HttpDelete("{idOrder}")]
         public async Task<ActionResult> DeleteOrder([FromRoute] Guid idOrder)
         {
-            //try
-            //{
             await _orderService.Remove(idOrder);
 
             return Ok();
-            //}
-            /*catch (OrderNotRegisteredException)
-            {
-                return NotFound("There is no such order");
-            }*/
         }
     }
 }

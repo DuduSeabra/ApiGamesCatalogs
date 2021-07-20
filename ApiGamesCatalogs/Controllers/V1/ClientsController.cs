@@ -84,7 +84,8 @@ namespace ApiGamesCatalogs.Controllers.V1
             }
         }
 
-        /// <summary>
+        
+        ///<summary>
         /// Delete the selected client
         /// </summary>
         /// <param name="idClient">Fetched client id</param>
@@ -107,4 +108,3 @@ namespace ApiGamesCatalogs.Controllers.V1
         }
     }
 }
-//Ja fiz a viewmodel, e as Inputmodel faltam os repositories e controller e services.
