@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiGamesCatalogs</name>
+    </assembly>
+    <members>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.ClientsController.Obtain(System.Int32,System.Int32)">
+            <summary>
+            Search all clients paged
+            </summary>
+            <remarks>
+            It is not possible to return clients without pagination
+            </remarks>
+            <param name="page">Indicates which page is being consulted. At least 1</param>
+            <param name="quantity">Indicates the number of registers per page. Minimum 1 and maximum 50</param>
+            <response code="200">Return to client list</response>
+            <response code="204">If there are no clients</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.ClientsController.Obtain(System.String)">
+            <summary>
+            Search a client by id
+            </summary>
+            <param name="idClient">Fetched client id</param>
+            <response code="200">Return the filtered client</response>
+            <response code="204">If there is no client with this id</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.ClientsController.InsertClient(ApiGamesCatalogs.InputModel.ClientInputModel)">
+            <summary>
+            Insert a new order
+            </summary>
+            <param name="clientInputModel">New client parameters</param>
+            <response code="200">Insert the new client and return it</response>
+            <response code="204">If there is already a client with this name for this producer</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.ClientsController.DeleteClient(System.String)">
+            <summary>
+            Delete the selected client
+            </summary>
+            <param name="idClient">Fetched client id</param>
+            <response code="200">Delete the selected client</response>
+            <response code="204">If there is no client with this id</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.Obtain(System.Int32,System.Int32)">
+            <summary>
+            Search all games paged
+            </summary>
+            <remarks>
+            It is not possible to return games without pagination
+            </remarks>
+            <param name="page">Indicates which page is being consulted. At least 1</param>
+            <param name="quantity">Indicates the number of registers per page. Minimum 1 and maximum 50</param>
+            <response code="200">Return to game list</response>
+            <response code="204">If there are no games</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.Obtain(System.Guid)">
+            <summary>
+            Search a game by id
+            </summary>
+            <param name="idGame">Fetched game id</param>
+            <response code="200">Return the filtered game</response>
+            <response code="204">If there is no game with this id</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.InsertGame(ApiGamesCatalogs.InputModel.GameInputModel)">
+            <summary>
+            Insert a new game
+            </summary>
+            <param name="gameInputModel">New game parameters</param>
+            <response code="200">Insert the new game and return it</response>
+            <response code="204">If there is already a game with this name for this producer</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.UpdateGame(System.Guid,ApiGamesCatalogs.InputModel.GameInputModel)">
+            <summary>
+            Update all game parameters
+            </summary>
+            <param name="idGame">Fetched game id</param>
+            <param name="gameInputModel">Updated parameters</param>
+            <response code="200">Update the new parameters and return it</response>
+            <response code="204">If there is no game with this id</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.UpdateGame(System.Guid,System.Double)">
+            <summary>
+            Only update the price parameter
+            </summary>
+            <param name="idGame">Fetched game id</param>
+            <param name="price">New game price</param>
+            <response code="200">Update the price and return it</response>
+            <response code="204">If there is no game with this id</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.GamesController.DeleteGame(System.Guid)">
+            <summary>
+            Delete the selected game
+            </summary>
+            <param name="idGame">Fetched game id</param>
+            <response code="200">Delete the selected game</response>
+            <response code="204">If there is no game with this id</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.OrdersController.Obtain(System.Int32,System.Int32)">
+            <summary>
+            Search all orders paged
+            </summary>
+            <remarks>
+            It is not possible to return orders without pagination
+            </remarks>
+            <param name="page">Indicates which page is being consulted. At least 1</param>
+            <param name="quantity">Indicates the number of registers per page. Minimum 1 and maximum 50</param>
+            <response code="200">Return to order list</response>
+            <response code="204">If there are no orders</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.OrdersController.Obtain(System.Guid)">
+            <summary>
+            Search a order by id
+            </summary>
+            <param name="idOrder">Fetched order id</param>
+            <response code="200">Return the filtered order</response>
+            <response code="204">If there is no order with this id</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.OrdersController.InsertOrder(ApiGamesCatalogs.InputModel.OrderInputModel)">
+            <summary>
+            Insert a new order
+            </summary>
+            <param name="orderInputModel">New order parameters</param>
+            <response code="200">Insert the new order and return it</response>
+            <response code="204">If there is already a order with this name for this producer</response>
+        </member>
+        <member name="M:ApiGamesCatalogs.Controllers.V1.OrdersController.DeleteOrder(System.Guid)">
+            <summary>
+            Delete the selected order
+            </summary>
+            <param name="idOrder">Fetched order id</param>
+            <response code="200">Delete the selected order</response>
+            <response code="204">If there is no order with this id</response>
+        </member>
+    </members>
+</doc>
