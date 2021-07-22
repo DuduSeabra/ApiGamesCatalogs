@@ -51,7 +51,7 @@ namespace ApiGamesCatalogs.Repositories
             await sqlConnection.CloseAsync();
             
             
-            foreach(var i in order.OrderId)
+            foreach(var i in order.GamesId)
             {
                 var orderitem = new OrderItem();
                 orderitem.Id = Guid.NewGuid();
@@ -71,7 +71,6 @@ namespace ApiGamesCatalogs.Repositories
         public async Task<List<Order>> Obtain(int page, int quantity)
         {
             var orders = new List<Order>();
-            var games = new List<Guid>();
             var aux1 = new List<Guid>();
 
             var command = $"select * from Orders order by id offset {((page - 1) * quantity)} rows fetch next {quantity} rows only";
@@ -94,9 +93,11 @@ namespace ApiGamesCatalogs.Repositories
 
             await sqlConnection.CloseAsync();
 
-
+            int count = 0;
             foreach(var i in aux1)
             {
+                var games = new List<Guid>();
+
                 await sqlConnection.OpenAsync();
 
                 command = $"select * from OrdersItem where OrderId = '{i}' order by id offset {((page - 1) * quantity)} rows fetch next {quantity} rows only";
@@ -110,11 +111,14 @@ namespace ApiGamesCatalogs.Repositories
 
                 foreach(var a in orders)
                 {
-                    if(a.Id == i)
-                        a.OrderId = games;
+                    if (a.Id == i)
+                    {
+                        a.GamesId = games;
+                    }
                 }
 
                 await sqlConnection.CloseAsync();
+                
             }
 
             return orders;
@@ -144,7 +148,7 @@ namespace ApiGamesCatalogs.Repositories
             }
 
             //order.Username = (string)sqlDataReader["Username"];
-            order.OrderId = aux;
+            order.GamesId = aux;
 
             await sqlConnection.CloseAsync();
 

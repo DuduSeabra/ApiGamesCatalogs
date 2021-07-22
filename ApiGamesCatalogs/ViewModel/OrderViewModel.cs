@@ -14,6 +14,6 @@ namespace ApiGamesCatalogs.ViewModel
         public string Username { get; set; }
         public Client Client;
 
-        public List<Guid> OrderId { get; set; }
+        public List<Guid> GamesId { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace ApiGamesCatalogs.Entities
         public string Username { get; set; }
         public Client Client { get; set; }
 
-        public List<Guid> OrderId { get; set; }
+        public List<Guid> GamesId { get; set; }
         public OrderItem OrderItem { get; set; }
 
     }
