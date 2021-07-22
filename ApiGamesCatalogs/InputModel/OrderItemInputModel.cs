@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ApiGamesCatalogs.InputModel
 {
-    public class OrderInputModel
+    public class OrderItemInputModel
     {
-        public string Username { get; set; }
-
-        public List<Guid> GamesId { get; set; }
+        public Guid GameId { get; set; }
     }
 }

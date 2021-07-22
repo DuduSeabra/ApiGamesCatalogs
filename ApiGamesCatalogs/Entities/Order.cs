@@ -10,9 +10,12 @@ namespace ApiGamesCatalogs.Entities
     public class Order
     {
         public Guid Id { get; set; }
-        public List<Game> Games { get; set; }
 
         public string Username { get; set; }
         public Client Client { get; set; }
+
+        public List<Guid> OrderId { get; set; }
+        public OrderItem OrderItem { get; set; }
+
     }
 }

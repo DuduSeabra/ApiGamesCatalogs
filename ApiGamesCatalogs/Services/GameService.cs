@@ -33,7 +33,7 @@ namespace ApiGamesCatalogs.Services
 
             var gameInsert = new Game
             {
-                GameId = Guid.NewGuid(),
+                Id = Guid.NewGuid(),
                 Name = game.Name,
                 Producer = game.Producer,
                 Price = game.Price
@@ -43,7 +43,7 @@ namespace ApiGamesCatalogs.Services
 
             return new GameViewModel
             {
-                Id = gameInsert.GameId,
+                Id = gameInsert.Id,
                 Name = game.Name,
                 Producer = game.Producer,
                 Price = game.Price
@@ -56,7 +56,7 @@ namespace ApiGamesCatalogs.Services
 
             return games.Select(game => new GameViewModel
             {
-                Id = game.GameId,
+                Id = game.Id,
                 Name = game.Name,
                 Producer = game.Producer,
                 Price = game.Price
@@ -72,7 +72,7 @@ namespace ApiGamesCatalogs.Services
 
             return new GameViewModel
             {
-                Id = game.GameId,
+                Id = game.Id,
                 Name = game.Name,
                 Producer = game.Producer,
                 Price = game.Price

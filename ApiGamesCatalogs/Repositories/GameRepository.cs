@@ -9,7 +9,7 @@ namespace ApiGamesCatalogs.Repositories
     public class GameRepository : IGameRepository
     {
         private static Dictionary<Guid, Game> games = new Dictionary<Guid, Game>(){
-            {Guid.Parse("0ca314a5-9282-45d8-92c3-2985f2a9fd04"), new Game{GameId = Guid.Parse("0ca314a5-9282-45d8-92c3-2985f2a9fd04"), Name = "Call of Duty", Producer = "Activision", Price = 200} }
+            {Guid.Parse("0ca314a5-9282-45d8-92c3-2985f2a9fd04"), new Game{Id = Guid.Parse("0ca314a5-9282-45d8-92c3-2985f2a9fd04"), Name = "Call of Duty", Producer = "Activision", Price = 200} }
         };
 
         public Task Delete(Guid id)
@@ -25,7 +25,7 @@ namespace ApiGamesCatalogs.Repositories
 
         public Task insert(Game game)
         {
-            games.Add(game.GameId, game);
+            games.Add(game.Id, game);
             return Task.CompletedTask;
         }
 
@@ -49,7 +49,7 @@ namespace ApiGamesCatalogs.Repositories
 
         public Task Update(Game game)
         {
-            games[game.GameId] = game;
+            games[game.Id] = game;
             return Task.CompletedTask;
         }
     }

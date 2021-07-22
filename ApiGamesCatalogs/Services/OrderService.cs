@@ -29,17 +29,17 @@ namespace ApiGamesCatalogs.Services
             var orderInsert = new Order
             {
                 Id = Guid.NewGuid(),
-                Games = order.Games,
-                Username = order.Username
+                Username = order.Username,
+                OrderId = order.GamesId
             };
 
             await _orderRepository.insert(orderInsert);
 
             return new OrderViewModel
             {
-                Id = Guid.NewGuid(),
+                Id = orderInsert.Id,
                 Username = order.Username,
-                Games = order.Games
+                OrderId = order.GamesId
             };
         }
 
@@ -51,7 +51,7 @@ namespace ApiGamesCatalogs.Services
             {
                 Id = order.Id,
                 Username = order.Username,
-                Games = order.Games
+                OrderId = order.OrderId
             }).ToList();
         }
 
@@ -66,7 +66,7 @@ namespace ApiGamesCatalogs.Services
             {
                 Id = order.Id,
                 Username = order.Username,
-                Games = order.Games
+                OrderId = order.OrderId
             };
         }
 
