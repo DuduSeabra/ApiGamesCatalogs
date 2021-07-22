@@ -92,8 +92,6 @@ namespace ApiGamesCatalogs.Repositories
             }
 
             await sqlConnection.CloseAsync();
-
-            int count = 0;
             foreach(var i in aux1)
             {
                 var games = new List<Guid>();
